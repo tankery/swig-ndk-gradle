@@ -39,7 +39,6 @@ task createCoreWrapperDir {
 }
 
 // For this to work, it's assumed SWIG is installed
-// TODO: This only works when called from Command Line (gradlew runSwig)
 task runSwig(dependsOn: ['createCoreWrapperDir']) {
 
     def swigInterfaces = fileTree(dir: 'src/main/jni', include: ['*.i'])
